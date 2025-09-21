@@ -3,21 +3,21 @@ using namespace std;
 
 // Time Complexity O(n^2)
 
-void selectionSort(int ray[], int n)
+void selectionSort(int ray[], int s)
 {
-    for (int m = 0; m < n - 1; m++)
+    for (int m = 0; m < s - 1; m++)
     {
         int sIdx = m;
 
-        for(int x = m + 1; x < n; x++)
+        for (int n = m + 1; n < s; n++)
         {
-            if (ray[x] < ray[sIdx])
+            if (ray[sIdx] > ray[n])
             {
-                sIdx = x;
+                sIdx = n;
             }
         }
 
-        swap(ray[m], ray[sIdx]);
+        swap(ray[sIdx], ray[m]);
     }
 }
 
