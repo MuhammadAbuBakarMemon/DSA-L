@@ -1,0 +1,9 @@
+What is the difference between Interpolation Search and Binary Search????
+
+Basically 
+
+Interpolation and Binary both will not work on an unsorted array, 
+
+Interpolation is more effective then binary search for uniform distributions
+and 
+Binary search is more effective for non uniform distribution of the elements int the array
