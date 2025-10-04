@@ -1,6 +1,8 @@
 #include <iostream>
 using namespace std;
 
+// Improved version of bubble sort
+
 void cSort(int ray[], int size)
 {
 

@@ -7,22 +7,22 @@ void shellSort(int ray[], int size)
 {
 
     const double shrink = 1.30;
-    int gap = (int) gap / shrink;
-
-    if (gap < 1) gap = 1;
-
-    for (int m = 1; m + gap < size; m++)
+    for (int gap = size; gap > 0; gap /= shrink)
     {
-        int key = ray[m];
-        int prev = m - gap;
 
-        while (prev >= 0 && ray[prev] > key)
+        for (int m = gap; m < size; m++)
         {
-            ray[prev + gap] = ray[prev];
-            prev -= gap;
-        }
+            int dabba = ray[m];
+            int prev = m;
+            
+            while (prev >= gap && ray[prev - gap] > dabba)
+            {
+                ray[prev] = ray[prev - gap];
+                prev -= gap; 
+            }
 
-        ray[prev + gap] = key;
+            ray[prev] = dabba;
+        }
     }
 
 };
@@ -43,9 +43,6 @@ int main(void)
     printRay(ray, 5);
 
     cout << endl;
-
-    // decCSort(ray, 5);
-    // printRay(ray, 5);
 
     return 0;
 }
