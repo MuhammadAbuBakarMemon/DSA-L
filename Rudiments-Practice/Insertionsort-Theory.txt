@@ -1,0 +1,23 @@
+Insertion Sort basically works on the principle that it takes an elements from the unsorted array and then gradually builds
+a sorted sequnece by inserting that element at it's correct position in the sorted sequence
+
+In each iteration an unsorted element is taken and placed at it's appropriate position and this continues until we obtain a sorted sequence
+
+My blabbering on the methodology:-
+
+It works by utilizing a previous index storeer, 
+first we start our outer loop from 1 as we assume that our base array of 1 element of the index 1 is already sorted, 
+iterate from 1 till n,
+and then save the first element from the unsorted array into a variable, we will swap this data later on after we exit the inner loop and have 
+figured out the appropriate position for our unsorted element
+then we enter a while loop that continues iterating until we have the previous index storer as greater than or equals to zero and the arrays value 
+at the previous index is greater than the data (key) 
+this is if we are sorting in an ascending order
+then we replace the value in our 
+array's previous index + 1 by the value in our array's previous index 
+ray[prev + 1] = ray[prev]
+which we do not need to worry about as we had already either stored our array's previous index + 1's value in a temporary variable 
+int data = ray[m]; and then we calculate prev = m - 1
+or 
+either we had already updated our ray[prev + 1]'s value with ray[prev] 
+and then we decrease the index of our previous pointer,

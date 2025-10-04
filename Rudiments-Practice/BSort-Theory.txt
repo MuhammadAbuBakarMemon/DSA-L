@@ -1,0 +1,10 @@
+okay so we also call the Bubble sort algorithm the sinking sort 
+
+because an ascending version of the particular sorting algorithm basically 
+sinks all the smaller elements to the start of the array 
+and 
+bubble sort because with each pass/iteration completed, we have a guarantee that the larget element is bubbled at the end of our list
+
+The viecersa is what we can consider for a Bubble sort algorithm that sorts everything in a descending order
+i.e that operates on the condition 
+ray[m] < ray[m + 1];

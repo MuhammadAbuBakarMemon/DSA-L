@@ -1,0 +1,20 @@
+How selection sort works is by finding the smallest element in our array and then it swaps it with the element in the first position
+then the algorithm figures out the second smallest element in the array and swaps that with the element at the second position 
+this carries onn until th eentire array is sorted 
+
+Working Methodology:-
+
+it considers the array as two sub arrays
+one sorted and one unsorted 
+
+Outer loop
+loops for n - 1 times because if we have sorted n - 1 elements in our array then it is obvious that all n elements have now been sorted
+
+Inner loop starts from m + 1 [1] index position because
+we assume that initially the first element is always sorted
+we loop until the end of the array looking for the smallest elements index 
+
+once we exit the inner loop swap operation is performed.....
+and for refernece or imaginary purposes the size of our sorted array increases by 1 and the unsorted array's size decreases by 1 simultaneously 
+
+this carries on for n - 1 times until we obtain a sorted array////
