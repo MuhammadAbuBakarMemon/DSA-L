@@ -1,0 +1,26 @@
+Types of Recursion 
+
+1) Direct vs Indirect Reecustion 
+
+Direct when a function directly calls itself 
+
+Indirect when a function A calls antother function B which then calls the function A back again, but both the fucntion A and B must have a 
+base case in order for them to avoid going into infinite loops
+Forming an indirect recursion cycle between the 2 fucntions
+
+2) Tail Recursion vs Non-Tail Recursion 
+This type is classified based on the position of the recursive call
+
+Tail Recusrion is when a function calls itself in the last statement in the recursive function 
+If the recusrive call is the last operation performed by our function then it is classified as an example of tail recursion 
+This makes tail recurion potentially more efficient as the compiler can optimize the code and treat it like iteration internally 
+
+Non-Tail Recusrsion is when even after the recursive call is made there is more work/computation pending inside of the function
+If the recursice call is not the last operation in the function then it is classified as a case of Non-Tail Recursion 
+When the recursive call is followed by pending opertions or the value from the recursice call must be used/returned
+
+3) Nested Recusrion 
+This type of recursion is when a function's  recursive call's parameters is a recursive call itself 
+meaning that inside a recursive call recursion hapens again 
+
+This is usually more difficult to trace and is more complex as compared to Tail and Direct Recursion 
