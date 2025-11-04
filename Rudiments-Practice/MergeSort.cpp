@@ -3,6 +3,9 @@ using namespace std;
 
 // Merge Sort works on divide and conquer
 
+
+// Overall Time Complexity O(n) 
+
 void Merge(int* ray, int start, int mid, int end)
 {
 
@@ -113,4 +116,9 @@ the pointer to the data and
 the size and capacity 
 so .size() is actually a member fu;nction that returns the number of elements stored
 
+TIME COMPLEXITY FOR RECURSIVE FUNCTIONS = Total Recursive Calls * Work Done In Each Call
+= log(n) * O(n)- from merge step 
+TC = n.log(n)
+
+SPACE COMPLEXITY = O(n
 */
