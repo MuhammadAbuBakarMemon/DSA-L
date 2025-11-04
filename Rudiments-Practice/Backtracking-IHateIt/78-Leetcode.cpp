@@ -2,7 +2,6 @@
 #include <vectors>
 using namespace std;
 
-vec
 
 int main(void)
 {
