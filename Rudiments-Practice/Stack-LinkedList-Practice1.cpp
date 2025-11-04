@@ -1,27 +1,22 @@
 #include <iostream>
 using namespace std;
 
-/*
-
-When we are implementing a stack we ensure that the operation of push(), pop() and peek() all operate with a time-complexity of O(1)
-
-*/
-
 class Node 
 {
 
-    public:
+    public: 
         int data;
         Node* next;
-    
+
         Node(int val)
         {
             data = val;
-            next = nullptr;
+            next = NULL;
         }
+
 };
 
-class Stack 
+class Stack
 {
 
     private:
@@ -33,9 +28,10 @@ class Stack
             top = nullptr;
         }
 
-        ~Stack(void)
+        ~Stack()
         {
-            while(!isEmpty())
+
+            while (!isEmpty())
             {
                 pop();
             }
@@ -45,12 +41,13 @@ class Stack
 
         void push(int val)
         {
+            
             Node* newNode = new Node(val);
 
             newNode->next = top;
             top = newNode;
 
-            cout << val << " Successfully pushed onto the stack.\n";
+            cout << val << " successfully pushed onto the stack.\n";
         }
 
         void pop()
@@ -58,77 +55,77 @@ class Stack
 
             if (isEmpty())
             {
-                cout << "Heap underflow, can not perform pop() operation.\n"; 
+                cout << "Heap underflow! nothing to pop from the Heap.\n";
                 return;
             }
 
             Node* temp = top;
+
             top = top->next;
 
-            cout << temp->data << " succcessfully popped from the stack.\n";
+            cout << temp->data << " successfully popped from the stack.\n";
             delete temp;
-
         }
 
         int peek(void)
         {
-
             if (isEmpty())
             {
-                cout << "Heap underflow! nothing to peek.\n";
+                cout << "Heap underflow! nothing to peek at.\n";
                 return -1;
             }
 
             return top->data;
         }
 
-        bool isEmpty(void)
+        bool isEmpty()
         {
             return (top == nullptr);
         }
 
-        void display()
+        void display(void)
         {
             if (isEmpty())
             {
-                cout << "Heap is empty.\n";
+                cout << "Heap in empty, nothing to display.\n";
                 return;
             }
 
-            cout << "\nHeap elements (top to bottom): " << endl;
+            cout << "Heap elements (top to bottom): " << endl;
 
-            Node *curr = top;
+            Node* curr = top;
 
-            while (curr != nullptr)
+            while (curr != NULL)
             {
+
                 cout << curr->data << "->";
-                curr = curr->next; 
+                curr = curr->next;
             }
 
-            cout << "NULL\n";
-            
+            cout << "NULL.\n";
+
+            delete curr;
         }
+
 };
 
 int main(void)
 {
     
-    Stack s;
+    Stack s1;
 
-    s.push(10);
-    s.push(20);
-    s.push(30);
+    s1.push(10);
+    s1.push(20);
+    s1.push(30);
 
-    cout << "value peeked: " << s.peek() << endl;
+    cout << "Value peeked: " << s1.peek() << endl;
 
-    s.pop();
-    s.pop();
+    s1.pop();
+    s1.pop();
 
-    cout << "value peeked: " << s.peek() << endl;
-
-    s.pop();
-
-    s.pop();
+    cout << "Value peeked: " << s1.peek() << endl;
+    s1.pop();
+    s1.pop();
 
     return 0;
 }
