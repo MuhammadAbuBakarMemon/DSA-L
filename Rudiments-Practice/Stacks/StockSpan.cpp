@@ -2,6 +2,13 @@
 #include <stack>
 using namespace std;
 
+/*
+
+TIME COMPLEXITY = n + n = O(n)
+SPACE COMPLEXITY = O(n)
+
+*/
+
 int main(void)
 {
 
