@@ -2,6 +2,14 @@
 #include <stack>
 using namespace std;
 
+/*
+TIME COMPLEXITY = n + n = O(n)
+SPACE COMPLEXITY = O(n)
+we do count the space taken up by our one extra array for storing the next greater element and the space taken 
+up by our stack  = n + n 
+*/
+
+
 int main(void)
 {
     
@@ -34,7 +42,7 @@ int main(void)
     // }
 
     // double practicing I guess 
-    
+
     size_t size = sizeof(ray)/sizeof(ray[0]);
 
     stack <int> st;
