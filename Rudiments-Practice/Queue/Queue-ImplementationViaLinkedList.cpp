@@ -16,6 +16,11 @@ class Node
 
 };
 
+/*
+The speciality of a queue is that it implements all enqueue(), dequeue(), and peek() functions wiht a 
+time complexity of O(1)
+*/
+
 class Queue
 {
 
@@ -65,7 +70,7 @@ class Queue
             if (isEmpty())
             {
                 cout << "Queue is empty can not peek." << endl;
-                return 0;
+                return -1;
             }
             else 
             {
