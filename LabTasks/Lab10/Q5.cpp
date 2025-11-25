@@ -168,9 +168,14 @@ void prioritySolve(int ray[], int k, int size)
     distinctCount++;
 
 
-    // noe we use our array to start and build our max heap, as per our requirements
-
-    for (int m = (distinctCount - 1) / 2; m >= 0; m--)
+    // now we use our array to start and build our max heap, as per our requirements
+   
+    // for (int m = (distinctCount - 1) / 2; m >= 0; m--)\
+    // there is a better formulae to this
+    
+    // The loop doesn't calculate the parent for every single node dynamically. It calculates the highest index that has children and starts working backward from there.
+    
+    for (int m = distinctCount / 2 - 1; m >= 0; m--)
     {
         heapifysink(distinctNode, distinctCount, m);
     }
