@@ -208,6 +208,69 @@ class CirrcularLinkedList
             cout << "Value: " << val << " not found.\n" << endl;
         }
 
+        bool seaech(int val)
+        {
+            if (isEmpty())
+            {
+                return false;
+            }
+
+            Node* trav = head;
+            do 
+            {
+                if (trav->data == val)
+                {
+                    return true;
+                }
+
+                trav = trav->next 
+            } while(trav != NULL);
+
+            return false;
+        }
+
+        void reverse()
+        {
+            if (isEmpty() || head->next == head)
+            {
+                return;
+            }
+
+            Node* current = head;
+            Node* prev = NULL;
+            Node* nxt = NULL;
+            Node* lastNode = head;
+
+            do 
+            {
+                nxt = current->next;
+                current->next = prev;
+                prev = curr;
+                curr = nxt;
+            } while(current != NULL);
+
+            head = prev;
+            lastNode->next = head;
+        }
+
+        void display()
+        {
+            if (isEmpty())
+            {
+                cout << "Empty List.\n";
+                return;
+            }
+            
+            Node* trav = head;
+
+            do 
+            {
+                cout << trav->data << "->";
+                trav = trav->next;
+            } while (trav != NULL)
+            cout << "(HEAD)" << endl;
+        }
+
 };
 
 int main(void)
